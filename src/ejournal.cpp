@@ -22,6 +22,8 @@ EJournal::EJournal(QWidget *parent)
     EMenuHelpAbout = new QAction(this);
 
     ////Main Journal View Initialization
+    EWidgetWebView = new QWidget();
+    //EWebViewMain = new QWebView();
     EGraphicsSceneMain = new QGraphicsScene();
     EGraphicsViewMain = new QGraphicsView(EGraphicsSceneMain);
 
@@ -48,7 +50,7 @@ EJournal::EJournal(QWidget *parent)
     //Menu Action Connection Set
     connect(EMenuFileQuit, SIGNAL(triggered()), this, SLOT(close()));
     connect(EMenuViewFullscreen, SIGNAL(triggered()), SLOT(EViewFullscreen()));
-    connect(EMenuHelpUpgrade, SIGNAL(triggered()), SLOT(EUpgradeWindowShow()));
+    connect(EMenuHelpUpgrade, SIGNAL(triggered()), SLOT(EUpdateWindowShow()));
     connect(EMenuHelpAbout, SIGNAL(triggered()), SLOT(EAboutWindowShow()));
 
     //MenuBar Set
@@ -150,10 +152,10 @@ void EJournal::EQuitFullscreen()
     this->showNormal();
 }
 
-void EJournal::EUpgradeWindowShow()
+void EJournal::EUpdateWindowShow()
 {
-    EUpgrade EUpgradeWindow;
-    EUpgradeWindow.exec();
+    EUpdate EUpdateWindow;
+    EUpdateWindow.exec();
 }
 
 void EJournal::EAboutWindowShow()

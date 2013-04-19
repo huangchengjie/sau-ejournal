@@ -10,12 +10,13 @@
 #include <QBoxLayout>
 #include <QGraphicsView>
 #include <QGraphicsScene>
+//#include <QWebKitWidgets/QWebView>
 #include <QSpacerItem>
 #include <QPushButton>
 #include <QStatusBar>
 
 #include "eabout.h"
-#include "eupgrade.h"
+#include "eupdate.h"
 
 class EJournal : public QMainWindow
 {
@@ -27,15 +28,19 @@ public:
 public slots:
     void EViewFullscreen();
     void EQuitFullscreen();
-    void EUpgradeWindowShow();
+    void EUpdateWindowShow();
     void EAboutWindowShow();
 private:
     QMenuBar* EMenuBar;
     QMenu* EMenuFile, * EMenuEdit, * EMenuView, * EMenuHelp;
     QWidget* EWidgetMain;
     QBoxLayout* EBoxLayoutMain, * EBoxLayoutButton;
+    //************************//
     QGraphicsView* EGraphicsViewMain;
     QGraphicsScene* EGraphicsSceneMain;
+    QWidget* EWidgetWebView;
+    //QWebView* EWebViewMain;
+    //************************//
     QSpacerItem* ESpacer_A, * ESpacer_B, * ESpacer_C, *ESpacer_D;
     QPushButton* EButtonPre, * EButtonZoomOut, * EButtonZoomIn, * EButtonNext, * EButtonViewFullscreen, * EButtonQuitFullscreen;
     QStatusBar* EStatusBar;

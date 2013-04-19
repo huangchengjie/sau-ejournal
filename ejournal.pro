@@ -12,11 +12,11 @@ TARGET = ejournal
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
+SOURCES += ./src/main.cpp\
         ./src/ejournal.cpp \
     ./src/eabout.cpp \
-    ./src/eupgrade.cpp
+    ./src/eupdate.cpp
 
 HEADERS  += ./src/ejournal.h \
     ./src/eabout.h \
-    ./src/eupgrade.h
+    ./src/eupdate.h
